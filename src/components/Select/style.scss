@@ -1,0 +1,76 @@
+$blockClassName: 'select';
+$height: 58px;
+
+@keyframes cameUp {
+    from {
+        transform: translateY($height + 4px);
+    }
+    to {
+        transform: translateY($height + 10px);
+    }
+}
+
+.#{$blockClassName} {
+    margin-top: 80px;
+    position: relative;
+    height: $height;
+    display: flex;
+    align-items: center;
+    background-color: var(--elements);
+    border-radius: px-to-rem(5);
+    box-shadow: 0 2px 2px 0 rgba(133, 133, 133, 0.2);
+
+    &__input {
+        padding-right: space(12);
+        padding-left: space(12);
+        width: 100%;
+        font-family: inherit;
+        color: inherit;
+        background-color: unset;
+        outline: none;
+        border: 0;
+        user-select: none;
+    }
+    &__items {
+        position: absolute;
+        top: 0;
+        transform: translateY($height + 10px);
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        border-radius: px-to-rem(5);
+        overflow: hidden;
+        background-color: var(--elements);
+        z-index: 100;
+        transition: opacity 0.2s;
+        box-shadow: 0 2px 2px 0 rgba(133, 133, 133, 0.2);
+
+        &--open {
+            animation: cameUp 700ms alternate;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding-right: space(12);
+        padding-left: space(12);
+        height: $height;
+
+        &:hover {
+            background-color: var(--elements-hover);
+        }
+    }
+    &__chevron {
+        color: var(--text-color);
+        transform: rotateZ(0deg);
+        transition: all 0.2s;
+        margin-right: space(6);
+
+        &--open {
+            transform: rotateZ(180deg);
+        }
+    }
+}

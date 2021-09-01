@@ -1,4 +1,4 @@
-export const Regions = {
+export const regions = {
   africa: "Africa",
   americas: "Americas",
   asia: "Asia",

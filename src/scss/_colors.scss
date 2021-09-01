@@ -9,6 +9,7 @@ $light-theme: (
   'text-color': $very-dark-blue-light,
   'background-color': $very-light-gray,
   'elements': $white,
+  'elements-hover': darken($white, 10),
   'spec-color': $dark-gray,
 );
 
@@ -16,5 +17,6 @@ $dark-theme: (
   'text-color': $white,
   'background-color': $very-dark-blue,
   'elements': $dark-blue,
+  'elements-hover': lighten($dark-blue, 10),
   'spec-color': $very-light-gray,
 );
