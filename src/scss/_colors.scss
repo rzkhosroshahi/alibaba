@@ -9,10 +9,12 @@ $light-theme: (
   'text-color': $very-dark-blue-light,
   'background-color': $very-light-gray,
   'elements': $white,
+  'spec-color': $dark-gray,
 );
 
 $dark-theme: (
   'text-color': $white,
   'background-color': $very-dark-blue,
   'elements': $dark-blue,
+  'spec-color': $very-light-gray,
 );

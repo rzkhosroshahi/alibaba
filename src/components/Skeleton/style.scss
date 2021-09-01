@@ -1,0 +1,23 @@
+$blockClassName: 'skeleton';
+$img: 150px;
+$p: 20px;
+$h: 40px;
+$background-color: lighten($dark-gray, 35);
+
+.#{$blockClassName} {
+    width: 100%;
+    background-color: $background-color;
+    @include animation-blink();
+
+    &__p {
+        border-radius: px-to-rem(12);
+        height: $p;
+    }
+    &__h {
+        border-radius: px-to-rem(12∂);
+        height: $h;
+    }
+    &__img {
+        height: $img;
+    }
+}

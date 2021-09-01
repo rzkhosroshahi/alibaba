@@ -1,0 +1,62 @@
+$blockClassName: 'countries';
+$gap: 74px;
+
+.#{$blockClassName} {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: $gap;
+    padding: space(10) space(20);
+    justify-items: center;
+
+    &__country {
+        overflow: hidden;
+        border-radius: px-to-rem(5);
+        background-color: var(--elements);
+        box-shadow: 0 2px 2px 0 rgba(133, 133, 133, 0.2);
+        color: var(--textClor);
+        text-decoration: none;
+        max-width: 264px;
+    }
+    &__flagWrapper {
+        height: 155px;
+    }
+    &__flag {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    &__info {
+        padding: space(7);
+    }
+    &__details {
+        font-size: $font-size-14;
+
+        &:not(:last-child) {
+            margin-bottom: space(2);
+        }
+    }
+    &__detailTitle {
+        font-weight: $font-weight-medium;
+    }
+    &__detailSpec {
+        font-weight: $font-weight-regular;
+        color: var(--spec-color)
+    }
+    &__title {
+        font-weight: $font-weight-fat;
+        margin-bottom: space(7);
+    }
+
+    @include respond-to(md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: $gap;
+        justify-items: unset;
+    }
+    @include respond-to(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond-to(xl) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -1,0 +1,12 @@
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@mixin animation-blink {
+  animation: blink 700ms infinite alternate-reverse;
+}

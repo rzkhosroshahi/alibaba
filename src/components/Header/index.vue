@@ -19,6 +19,8 @@ export default {
     };
   },
   mounted() {
+    this.applyTheme();
+
     const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
     darkQuery.addEventListener("change", (e) => {
       const currentTheme = e.target.matches ? "dark" : "light";
@@ -46,7 +48,7 @@ export default {
     getStoredTheme() {
       return window.localStorage.getItem("theme");
     },
-    applyTheme(theme = "light") {
+    applyTheme(theme) {
       const storedTheme = this.getStoredTheme();
       const osTheme = this.getOsTheme();
       const preferredColor = theme || osTheme;
