@@ -1,0 +1,17 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Convert a pixel unit to rem
+@function px-to-rem($size, $base: 16px) {
+  @return strip-unit($size / $base) * 1rem;
+}
+
+@function space($size, $base: 4) {
+  $point: $size * $base;
+  @return px-to-rem($point);
+}
