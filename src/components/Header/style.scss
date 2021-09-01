@@ -1,0 +1,27 @@
+$blockClassName: 'header';
+
+.#{$blockClassName} {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--elements);
+  padding: space(8) space(20);
+  box-shadow: 0 2px 2px 0 rgba(133,133,133, 0.2);
+
+  &__darkMode {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
+  &__title {
+    font-weight: $font-weight-fat;
+  }
+  &__darkText {
+    font-weight: $font-weight-medium;
+    padding-left: space(2);
+  }
+  &__moonIcon {
+    color: var(--text-color);
+  }
+}
