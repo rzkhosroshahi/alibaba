@@ -1,8 +1,8 @@
 <template>
   <p v-if="isLoading">loading...</p>
   <section v-else-if="country" class="country">
-    <div class="country__img">
-      <img :src="country.flag" rel="preload" alt="" />
+    <div class="country__flag">
+      <img :src="country.flag" class="country__img" rel="preload" alt="" />
     </div>
     <div class="country__info">
       <h2 class="country__title">
@@ -57,11 +57,16 @@
         </p>
       </div>
       <div class="country__borders">
-        <span class="country__detailTitle">Border Countries</span>:
+        <span class="country__borderTitle">Border Countries: </span>
         <div class="country__borderItems">
-          <div v-for="border in country.borders" :key="border">
+          <chips
+            v-for="border in country.borders"
+            :key="border"
+            class="country__borderItem"
+            sm
+          >
             {{ border }}
-          </div>
+          </chips>
         </div>
       </div>
     </div>
@@ -69,6 +74,7 @@
 </template>
 <script>
 import { getCountriesByCode } from "./api";
+import Chips from "@/components/chips";
 
 export default {
   name: "Details",
@@ -77,6 +83,9 @@ export default {
       country: null,
       isLoading: false,
     };
+  },
+  components: {
+    Chips,
   },
   mounted() {
     const { code } = this.$route.params;
