@@ -1,0 +1,37 @@
+$blockClassName: 'input';
+$height: 58px;
+
+.#{$blockClassName} {
+    position: relative;
+    height: $height;
+    display: flex;
+    align-items: center;
+    background-color: var(--elements);
+    border-radius: px-to-rem(5);
+    box-shadow: 0 2px 2px 0 rgba(133, 133, 133, 0.2);
+
+    &__input {
+        padding-right: space(8);
+        padding-left: space(8);
+        width: 100%;
+        font-family: inherit;
+        color: inherit;
+        background-color: unset;
+        outline: none;
+        border: 0;
+        user-select: none;
+    }
+    &__icon {
+        color: var(--text-color);
+        transform: rotateZ(0deg);
+        transition: all 0.2s;
+        margin-left: space(6);
+
+        &--open {
+            transform: rotateZ(180deg);
+        }
+    }
+    &__slot {
+        margin-right: space(6);
+    }
+}
