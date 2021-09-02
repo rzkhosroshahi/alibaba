@@ -1,0 +1,32 @@
+$blockClassName: 'chip';
+$width: 109px;
+$width-sm: 76px;
+
+.#{$blockClassName} {
+  font-weight: $font-weight-medium;
+  color: var(--spec-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: space(1);
+  margin-left: space(1);
+  min-width: $width;
+  padding: space(2) space(6);
+  box-shadow: 0 0 6px 0 rgba(133,133,133, 0.2);
+  transition: box-shadow 0.2s ease;
+  background-color: var(--elements);
+
+  &--sm {
+    font-size: $font-size-14;
+    min-width: $width-sm;
+    padding: space(1) space(4);
+  }
+  &--link {
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: 0 0 12px 0 rgba(133,133,133, 0.2);
+    }
+  }
+}
