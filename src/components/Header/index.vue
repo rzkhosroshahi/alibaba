@@ -1,9 +1,11 @@
 <template>
   <header class="header">
-    <h2 class="header__title">Where in the world?</h2>
-    <div class="header__darkMode" @click="handleDarkMode">
-      <icon name="moon" class="header__moonIcon" />
-      <p class="header__darkText">Dark Mode</p>
+    <div class="header__wrapper">
+      <h2 class="header__title">Where in the world?</h2>
+      <div class="header__darkMode" @click="handleDarkMode">
+        <icon name="moon" class="header__moonIcon" />
+        <p class="header__darkText">Dark Mode</p>
+      </div>
     </div>
   </header>
 </template>

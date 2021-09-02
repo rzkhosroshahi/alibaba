@@ -19,6 +19,8 @@ $gap: 20px;
   }
   @include respond-to(md) {
     &__filters {
+      max-width: 1440px;
+      margin: 0 auto;
       flex-direction: row;
     }
     &__regions {

@@ -7,6 +7,11 @@ $blockClassName: 'header';
   padding: space(8) space(20);
   box-shadow: 0 2px 2px 0 rgba(133,133,133, 0.2);
 
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
   &__darkMode {
     cursor: pointer;
     display: flex;
@@ -28,6 +33,10 @@ $blockClassName: 'header';
   }
 
   @include respond-to(md) {
+    &__wrapper {
+      width: 1440px;
+      margin: 0 auto;
+    }
     &__title {
       font-size: 24px;
     }

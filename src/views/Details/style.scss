@@ -66,6 +66,9 @@ $gap: 20px;
   }
 
   @include respond-to(md) {
+    max-width: 1440px;
+    margin: 0 auto;
+
     &__wrapper {
       grid-template-columns: repeat(2, 1fr);
       column-gap: $gap;
