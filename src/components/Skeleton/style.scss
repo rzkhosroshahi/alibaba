@@ -20,4 +20,9 @@ $background-color: lighten($dark-gray, 35);
     &__img {
         height: $img;
     }
+    &__chip {
+        width: 110px;
+        height: 45px;
+        border-radius: 4px;
+    }
 }

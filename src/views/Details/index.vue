@@ -1,5 +1,5 @@
 <template>
-  <p v-if="isLoading">loading...</p>
+  <skeleton v-if="isLoading" />
   <section v-else-if="country" class="country">
     <div class="country__back">
       <chips to="/" class="country__backBtn">
@@ -84,6 +84,7 @@
 import { getCountriesByCode } from "./api";
 import Chips from "@/components/chips";
 import Icon from "../../components/Icon";
+import Skeleton from "./components/skeleton";
 
 export default {
   name: "Details",
@@ -94,6 +95,7 @@ export default {
     };
   },
   components: {
+    Skeleton,
     Icon,
     Chips,
   },
