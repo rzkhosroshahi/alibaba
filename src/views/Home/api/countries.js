@@ -10,3 +10,14 @@ export const getCountriesByRegion = async (region = "Asia") => {
     return Promise.reject(ex);
   }
 };
+
+export const getCountriesByName = async (name) => {
+  try {
+    const { data } = await axios.get(
+      `https://restcountries.eu/rest/v2/name/${name}`
+    );
+    return data;
+  } catch (ex) {
+    return Promise.reject(ex);
+  }
+};
