@@ -8,7 +8,7 @@ $height: 58px;
     align-items: center;
     background-color: var(--elements);
     border-radius: px-to-rem(5);
-    box-shadow: 0 2px 2px 0 rgba(133, 133, 133, 0.2);
+    box-shadow: 0 2px 10px 0 rgba(133, 133, 133, 0.2);
 
     &__input {
         padding-right: space(8);
@@ -22,11 +22,11 @@ $height: 58px;
         user-select: none;
 
         &::placeholder {
-            color: var(--text-color);
+            color: var(--spec-color);
         }
     }
     &__icon {
-        color: var(--text-color);
+        color: var(--spec-color);
         transform: rotateZ(0deg);
         transition: all 0.2s;
         margin-left: space(6);
