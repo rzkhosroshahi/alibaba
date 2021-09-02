@@ -15,13 +15,24 @@ $blockClassName: 'header';
     user-select: none;
   }
   &__title {
+    font-size: 16px;
     font-weight: $font-weight-fat;
   }
   &__darkText {
+    font-size: 14px;
     font-weight: $font-weight-medium;
     padding-left: space(2);
   }
   &__moonIcon {
     color: var(--text-color);
+  }
+
+  @include respond-to(md) {
+    &__title {
+      font-size: 24px;
+    }
+    &__darkText {
+      font-size: 16px;
+    }
   }
 }
