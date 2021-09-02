@@ -22,7 +22,7 @@
           </p>
           <p class="country__details">
             <span class="country__detailTitle">Population</span>:
-            <span class="country__detailSpec">{{ country.population }}</span>
+            <span class="country__detailSpec">{{ country.population | numberFormat }}</span>
           </p>
           <p class="country__details">
             <span class="country__detailTitle">Region</span>:

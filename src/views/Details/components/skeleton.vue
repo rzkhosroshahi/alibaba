@@ -1,5 +1,5 @@
 <template>
-  <section class="country">
+  <container class="country">
     <div class="country__back">
       <skeleton name="chip" />
     </div>
@@ -37,11 +37,13 @@
         </div>
       </div>
     </div>
-  </section>
+  </container>
 </template>
 <script>
 import Skeleton from "@/components/Skeleton/index.vue";
+import Container from "@/components/Container";
+
 export default {
-  components: { Skeleton },
+  components: { Container, Skeleton },
 };
 </script>
