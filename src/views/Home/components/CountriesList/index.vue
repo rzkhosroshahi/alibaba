@@ -16,7 +16,9 @@
         </h3>
         <p class="countries__details">
           <span class="countries__detailTitle">Population</span>:
-          <span class="countries__detailSpec">{{ country.population | numberFormat }}</span>
+          <span class="countries__detailSpec">{{
+            country.population | numberFormat
+          }}</span>
         </p>
         <p class="countries__details">
           <span class="countries__detailTitle">Region</span>:
