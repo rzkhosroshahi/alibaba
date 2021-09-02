@@ -3,7 +3,7 @@
     <input class="select__input" :value="value" readonly />
     <div v-if="items.length" :class="itemsClassName">
       <div v-for="item in items" :key="item">
-        <div @click="handleChangeValue(item)" class="select__item">
+        <div @click="handleChangeValue(item)" :class="itemClassName(item)">
           {{ item }}
         </div>
       </div>
@@ -51,6 +51,12 @@ export default {
     },
     toggleOpenItems() {
       this.isOpen = !this.isOpen;
+    },
+    itemClassName(item) {
+      return {
+        select__item: true,
+        "select__item--selected": this.value === item,
+      };
     },
   },
 };

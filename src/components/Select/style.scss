@@ -60,6 +60,9 @@ $height: 58px;
         &:hover {
             background-color: var(--elements-hover);
         }
+        &--selected {
+            background-color: var(--elements-hover);
+        }
     }
     &__chevron {
         color: var(--text-color);
