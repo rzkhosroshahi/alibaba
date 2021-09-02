@@ -2,9 +2,16 @@ $blockClassName: 'country';
 $gap: 20px;
 
 .#{$blockClassName} {
-  display: grid;
+  margin-top: space(15);
   padding: space(10) space(20);
 
+  &__wrapper {
+    display: grid;
+    row-gap: $gap;
+  }
+  &__title {
+    margin-bottom: space(5);
+  }
   &__flag {
     display: flex;
     justify-content: center;
@@ -33,13 +40,14 @@ $gap: 20px;
   &__borders {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
+    margin-top: space(4);
   }
   &__borderTitle {
     min-width: 130px;
     font-weight: $font-weight-medium;
     margin-right: space(4);
+    margin-bottom: space(4);
   }
   &__borderItems {
     display: flex;
@@ -49,13 +57,20 @@ $gap: 20px;
   &__borderItem {
     margin-bottom: space(2);
   }
+  &__back {
+    display: flex;
+    margin-bottom: space(15);
+  }
+  &__arrow {
+    margin-right: space(2);
+  }
 
   @include respond-to(md) {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: $gap;
-    align-items: center;
-    justify-items: center;
-
+    &__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $gap;
+      align-items: center;
+    }
     &__info {
       display: flex;
       flex-direction: column;
@@ -70,8 +85,12 @@ $gap: 20px;
       margin-bottom: space(8);
     }
     &__borders {
-      margin-top: space(17);
+      align-items: center;
       flex-direction: row;
+      margin-top: space(17);
+    }
+    &__borderTitle {
+      margin-bottom: space(0);
     }
   }
 }
