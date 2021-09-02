@@ -5,7 +5,7 @@
       v-for="country in list"
       class="countries__country"
       :key="country.numericCode"
-      to="/"
+      :to="`country/${country.name}`"
     >
       <div class="countries__flagWrapper">
         <img :src="country.flag" class="countries__flag" alt="" rel="preload" />

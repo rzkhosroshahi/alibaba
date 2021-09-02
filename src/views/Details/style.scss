@@ -1,0 +1,55 @@
+$blockClassName: 'country';
+$gap: 96px;
+
+.#{$blockClassName} {
+  display: grid;
+  padding: space(10) space(20);
+
+  &__title {
+    font-weight: $font-weight-fat;
+  }
+  &__details {
+    font-size: $font-size-16;
+
+    &:not(:last-child) {
+      margin-bottom: space(2);
+    }
+  }
+  &__detailTitle {
+    font-weight: $font-weight-medium;
+  }
+  &__detailSpec {
+    font-weight: $font-weight-regular;
+    color: var(--spec-color)
+  }
+  &__borders {
+    display: flex;
+    align-items: center;
+  }
+  &__borderItems {
+    display: flex;
+    align-items: center;
+  }
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $gap;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__specs {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__title {
+      margin-bottom: space(8);
+    }
+    &__borders {
+      margin-top: space(17);
+    }
+  }
+}
