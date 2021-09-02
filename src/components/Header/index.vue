@@ -2,17 +2,17 @@
   <header class="header">
     <h2 class="header__title">Where in the world?</h2>
     <div class="header__darkMode" @click="handleDarkMode">
-      <moon class="header__moonIcon" />
+      <icon name="moon" class="header__moonIcon" />
       <p class="header__darkText">Dark Mode</p>
     </div>
   </header>
 </template>
 <script>
-import Moon from "./moon";
+import Icon from "../Icon";
 
 export default {
   name: "Header",
-  components: { Moon },
+  components: { Icon },
   data() {
     return {
       isDark: false,

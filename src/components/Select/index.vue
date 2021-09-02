@@ -8,15 +8,15 @@
         </div>
       </div>
     </div>
-    <chevron-down class="chevron" :class="iconClassName" />
+    <icon name="chevron-down" :class="iconClassName" />
   </div>
 </template>
 <script>
-import ChevronDown from "./ChevronDown";
+import Icon from "../Icon";
 
 export default {
   name: "Select",
-  components: { ChevronDown },
+  components: { Icon },
   props: {
     value: {
       type: String,
