@@ -20,6 +20,10 @@ $height: 58px;
         outline: none;
         border: 0;
         user-select: none;
+
+        &::placeholder {
+            color: var(--text-color);
+        }
     }
     &__icon {
         color: var(--text-color);
