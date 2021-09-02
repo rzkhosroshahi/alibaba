@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="home__filters">
+    <container class="home__filters">
       <Input
         v-model="search"
         @input="onSearch"
@@ -14,7 +14,7 @@
         class="home__regions"
         @change="onRegionChange"
       />
-    </div>
+    </container>
     <countries-list :list="list" :loading="isLoading" />
   </div>
 </template>
@@ -24,12 +24,13 @@ import { getCountriesByRegion, getCountriesByName } from "./api/countries";
 import CountriesList from "./components/CountriesList";
 import Select from "@/components/Select";
 import Input from "@/components/Input";
+import Container from "@/components/Container";
 import { regions } from "./constants";
 import debounce from "../../modules/debounce";
 
 export default {
   name: "Home",
-  components: { Select, CountriesList, Input },
+  components: { Container, Select, CountriesList, Input },
   data() {
     return {
       regions,

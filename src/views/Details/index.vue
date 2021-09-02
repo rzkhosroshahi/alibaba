@@ -1,6 +1,6 @@
 <template>
   <skeleton v-if="isLoading" />
-  <section v-else-if="country" class="country">
+  <container v-else-if="country" class="country">
     <div class="country__back">
       <chips to="/" class="country__backBtn">
         <icon name="arrow-left" class="country__arrow" />
@@ -78,12 +78,13 @@
         </div>
       </div>
     </div>
-  </section>
+  </container>
 </template>
 <script>
 import { getCountriesByCode } from "./api";
 import Chips from "@/components/chips";
-import Icon from "../../components/Icon";
+import Icon from "@/components/Icon";
+import Container from "@/components/Container";
 import Skeleton from "./components/skeleton";
 
 export default {
@@ -95,6 +96,7 @@ export default {
     };
   },
   components: {
+    Container,
     Skeleton,
     Icon,
     Chips,

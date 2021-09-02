@@ -1,6 +1,6 @@
 <template>
   <skeleton v-if="loading" />
-  <section v-else-if="list.length" class="countries">
+  <container v-else-if="list.length" class="countries">
     <router-link
       v-for="country in list"
       class="countries__country"
@@ -28,13 +28,15 @@
         </p>
       </div>
     </router-link>
-  </section>
+  </container>
 </template>
 <script>
 import Skeleton from "./skeleton";
+import Container from "@/components/Container";
+
 export default {
   name: "CountriesList",
-  components: { Skeleton },
+  components: { Container, Skeleton },
   props: {
     list: {
       type: Array,

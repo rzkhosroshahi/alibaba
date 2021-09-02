@@ -1,20 +1,21 @@
 <template>
   <header class="header">
-    <div class="header__wrapper">
+    <container class="header__wrapper">
       <h2 class="header__title">Where in the world?</h2>
       <div class="header__darkMode" @click="handleDarkMode">
         <icon name="moon" class="header__moonIcon" />
         <p class="header__darkText">Dark Mode</p>
       </div>
-    </div>
+    </container>
   </header>
 </template>
 <script>
 import Icon from "../Icon";
+import Container from "@/components/Container";
 
 export default {
   name: "Header",
-  components: { Icon },
+  components: { Icon, Container },
   data() {
     return {
       isDark: false,

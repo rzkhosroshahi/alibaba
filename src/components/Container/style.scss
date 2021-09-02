@@ -1,0 +1,13 @@
+$blockClassName: 'container';
+
+.#{$blockClassName} {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: space(10);
+
+    @include respond-to(md) {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: space(10) space(20);
+    }
+}

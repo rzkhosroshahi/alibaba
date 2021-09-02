@@ -4,7 +4,6 @@ $blockClassName: 'header';
   display: flex;
   justify-content: space-between;
   background-color: var(--elements);
-  padding: space(8) space(20);
   box-shadow: 0 2px 2px 0 rgba(133,133,133, 0.2);
 
   &__wrapper {
@@ -33,10 +32,6 @@ $blockClassName: 'header';
   }
 
   @include respond-to(md) {
-    &__wrapper {
-      width: 1440px;
-      margin: 0 auto;
-    }
     &__title {
       font-size: 24px;
     }
