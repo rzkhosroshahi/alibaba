@@ -47,6 +47,9 @@ export default {
   },
   methods: {
     handleChangeValue(val) {
+      if (val === this.value) {
+        return;
+      }
       this.$emit("change", val);
     },
     toggleOpenItems() {
