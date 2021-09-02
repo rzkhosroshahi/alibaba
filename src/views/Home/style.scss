@@ -1,0 +1,31 @@
+$blockClassName: 'home';
+$gap: 20px;
+
+.#{$blockClassName} {
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: space(10) space(20);
+    gap: 24px;
+  }
+  &__regions {
+    max-width: 220px;
+    align-self: flex-start;
+  }
+  &__search {
+    min-width: 100%;
+  }
+  @include respond-to(md) {
+    &__filters {
+      flex-direction: row;
+    }
+    &__regions {
+      max-width: 220px;
+    }
+    &__search {
+      min-width: 380px;
+    }
+  }
+}

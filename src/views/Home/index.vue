@@ -1,16 +1,20 @@
 <template>
   <div class="home">
-    <Select
-      :items="Object.values(regions)"
-      :value="region"
-      @change="onRegionChange"
-    />
-    <Input
-      v-model="search"
-      @input="onSearch"
-      placeholder="search for a country..."
-      icon="search"
-    />
+    <div class="home__filters">
+      <Input
+        v-model="search"
+        @input="onSearch"
+        class="home__search"
+        placeholder="search for a country..."
+        icon="search"
+      />
+      <Select
+        :items="Object.values(regions)"
+        :value="region"
+        class="home__regions"
+        @change="onRegionChange"
+      />
+    </div>
     <countries-list :list="list" :loading="isLoading" />
   </div>
 </template>
@@ -73,3 +77,4 @@ export default {
   },
 };
 </script>
+<style lang="scss" src="./style.scss"></style>
